@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>the count</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="http://bootswatch.com/paper/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal">
+              Set Count
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <button type="button" class="btn btn-danger btn-lg btn-block" id="reset">
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Set a new Value</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form">
+                <div class="form-group">
+                  <label>New Amount</label>
+                  <input type="text" class="form-control" name="name" id="countValue" placeholder="set Count" value="">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" id="setCount">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="iSpentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">How much did you spend?</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form">
+                <div class="form-group">
+                  <label>I Spent</label>
+                  <input type="text" class="form-control" name="name" id="iSpentValue" placeholder="I spent" value="">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" id="iSpentSubmit">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jumbotron text-center">
+        <div id="count"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <button type="button" class="btn btn-success btn-lg btn-block" id="iSpent"  data-toggle="modal" data-target="#iSpentModal">I Spent</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.2.6/firebase.js"></script>
+  <script src="app.js"></script>
+  </body>
+</html>

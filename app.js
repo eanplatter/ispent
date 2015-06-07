@@ -1,5 +1,6 @@
 console.log('the count');
 $(document).ready(function() {
+  window.scrollTo(0,1);
   var amount;
   var count = new Firebase("https://thecount.firebaseio.com/");
   count.child("count").on("value", function(snapshot) {

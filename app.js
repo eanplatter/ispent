@@ -15,6 +15,9 @@ $(document).ready(function() {
   $("#setCount").on('click', function() {
     var countVal = $("#countValue").val();
     countVal = parseFloat(countVal);
+    if(countVal < 10000) {
+      countVal = countVal.toPrecision(4);
+    }
     count.set({count: countVal});
     $("#countValue").val("");
   });
@@ -23,6 +26,9 @@ $(document).ready(function() {
     var iSpentVal = $("#iSpentValue").val();
     iSpentVal = parseFloat(iSpentVal);
     amount = amount - iSpentVal;
+    if(amount < 10000) {
+      amount = amount.toPrecision(4);
+    }
     count.set({count: amount});
     $("#iSpentValue").val("");
   });
